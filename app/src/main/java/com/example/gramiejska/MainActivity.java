@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button button =findViewById(R.id.button);
         textView = findViewById(R.id.textView);
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         button.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
